@@ -1,0 +1,28 @@
+{
+  "name": "sigmi",
+  "version": "1.0.0",
+  "description": "Chat bot helpdesk for Sigma Alimentos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCodeRaccoons/MessengerBot.git"
+  },
+  "keywords": [
+    "bot",
+    "framework",
+    "ai"
+  ],
+  "author": "Code Raccoons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheCodeRaccoons/MessengerBot/issues"
+  },
+  "homepage": "https://github.com/TheCodeRaccoons/MessengerBot#readme",
+  "dependencies": {
+    "botbuilder": "^3.9.1",
+    "restify": "^5.2.0"
+  }
+}
