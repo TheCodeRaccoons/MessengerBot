@@ -27,6 +27,18 @@ const intents = new builder.IntentDialog({ recognizers: [recognizer] });
 ** AI depending on the request made**
 *************************************/ 
 
+bot.dialog('greetings', [
+    // Step 1
+    function (session) {
+        builder.Prompts.text(session, 'Hi! What is your name?');
+    },
+    // Step 2
+    function (session, results) {
+        session.endDialog('Hello %s!', results.response);
+    }
+]);
+
+
 //SAP Workflow
 intents.matches('saludo', function (session, results) {
     session.send('Hola, en que te podemos ayudar?'); 
@@ -42,7 +54,7 @@ intents.matches('chPw', function (session, results) {
 
 //SAP Workflow
 intents.matches('psSap', function (session, results) {
-    session.send('Deacuerdo, para poder reestablecer tu contrasena de SAP es necesario entrar a esta liga');
+    session.send('Deacuerdo, para poder reestablecer o cambiar tu contrasena de SAP es necesario entrar a esta liga');
     session.send('https://www.youtube.com/watch?v=hQcLd-T30g4&t=1285s'); 
 });
 
