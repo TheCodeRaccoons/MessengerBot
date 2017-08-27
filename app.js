@@ -56,6 +56,12 @@ intents.matches('psAD', function (session, results) {
 
 //Unlock User
 intents.matches('asSap', function (session, results) {
+    session.send('podrias darnos tu correo electronico para enviar una liga de restablecimiento?'); 
+});
+
+
+//Unlock User
+intents.matches('ubUs', function (session, results) {
     session.send('Lamentamos escuchar eso ¿En que cuenta te encuentras bloqueado?');
     session.send('Sap, Active Directory');  
 });
