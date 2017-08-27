@@ -62,10 +62,9 @@ intents.matches('ubUs', function (session, results) {
 });
 
 
-
-
 //Set default response
-intents.onDefault(builder.DialogAction.send('No he entendido lo que quieres decir'));
+intents.onDefault(builder.DialogAction.send('Lo siento no entendi a que te refieres. buscas informacion sobre'));
+intents.onDefault(builder.DialogAction.send('problemas con la contrasena / problemas para reactivar tu cuenta / dar de alta a un usuario en sap?'));
 
 
 //Every time a dialog is realized it will try to catch some of the intents
