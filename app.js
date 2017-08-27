@@ -27,9 +27,14 @@ const intents = new builder.IntentDialog({ recognizers: [recognizer] });
 ** AI depending on the request made**
 *************************************/ 
 
+//SAP Workflow
+intents.matches('saludo', function (session, results) {
+    session.send('Hola, en que te podemos ayudar?'); 
+});
+
 //Change password
 intents.matches('chPw', function (session, results) {
-    session.send('Hola ¿con la contrasena de que cuenta tienes problema?');
+    session.send('¿Con la contrasena de que cuenta tienes problema?');
     session.send('Sap, Active Directory, Service Desk, Sigma'); 
 });
 
@@ -40,10 +45,6 @@ intents.matches('psSap', function (session, results) {
 });
 
 
-//SAP Workflow
-intents.matches('saludo', function (session, results) {
-    session.send('Hola, en que te podemos ayudar?'); 
-});
 
 
 //Set default response
