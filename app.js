@@ -33,12 +33,17 @@ intents.matches('chPw', function (session, results) {
     session.send('Sap, Active Directory, Service Desk, Sigma'); 
 });
 
-//Change password
+//SAP Workflow
 intents.matches('psSap', function (session, results) {
     session.send('Deacuerdo, para poder reestablecer tu contrasena de SAP es necesario entrar a esta liga');
     session.send('https://www.youtube.com/watch?v=hQcLd-T30g4&t=1285s'); 
 });
 
+
+//SAP Workflow
+intents.matches('saludo', function (session, results) {
+    session.send('Hola, en que te podemos ayudar?'); 
+});
 
 
 //Set default response
