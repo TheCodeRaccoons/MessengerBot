@@ -28,7 +28,7 @@ const intents = new builder.IntentDialog({ recognizers: [recognizer] });
 
 //SAP Workflow
 intents.matches('saludo', function (session, results) {
-    session.send('Hola, en que te podemos ayudar?'); 
+    session.send('Hola, soy Sigmi. El robot ayudante de Sigma ¿En qué te puedo ayudar?'); 
 });
 
 
