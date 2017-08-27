@@ -15,19 +15,8 @@ var connector = new builder.ChatConnector({
 
 });
 
-var bot = new builder.UniversalBot(connector);
-
-// Setup LUIS
-const recognizer = new builder.LuisRecognizer('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/42bad151-2e3b-4441-9d4d-e53d096ce3e7?subscription-key=33c7ca06d81a4e50a32e11120bbda382&timezoneOffset=0&verbose=true&q=');
-const intents = new builder.IntentDialog({ recognizers: [recognizer] });
-
-
-/************************************
-** Intents and actions taken by the**
-** AI depending on the request made**
-*************************************/ 
-
-bot.dialog('greetings', [
+var bot = new builder.UniversalBot(connector, [
+    
     // Step 1
     function (session) {
         builder.Prompts.text(session, 'Hi! What is your name?');
@@ -38,6 +27,15 @@ bot.dialog('greetings', [
     }
 ]);
 
+// Setup LUIS
+const recognizer = new builder.LuisRecognizer('https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/42bad151-2e3b-4441-9d4d-e53d096ce3e7?subscription-key=33c7ca06d81a4e50a32e11120bbda382&timezoneOffset=0&verbose=true&q=');
+const intents = new builder.IntentDialog({ recognizers: [recognizer] });
+
+
+/************************************
+** Intents and actions taken by the**
+** AI depending on the request made**
+*************************************/ 
 
 //SAP Workflow
 intents.matches('saludo', function (session, results) {
