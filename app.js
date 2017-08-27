@@ -30,9 +30,13 @@ const intents = new builder.IntentDialog({ recognizers: [recognizer] });
 //Change password
 intents.matches('chPw', function (session, results) {
     session.send('Hola ¿con la contrasena de que cuenta tienes problema?');
-    session.send('Sap, Active Directory, Service Desk, Sigma');
-    setTimeout(5000);
-    session.send('porfa contesta :C');
+    session.send('Sap, Active Directory, Service Desk, Sigma'); 
+});
+
+//Change password
+intents.matches('psSap', function (session, results) {
+    session.send('Deacuerdo, para poder reestablecer tu contrasena de SAP es necesario entrar a esta liga');
+    session.send('https://www.youtube.com/watch?v=hQcLd-T30g4&t=1285s'); 
 });
 
 
