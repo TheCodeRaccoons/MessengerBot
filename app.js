@@ -7,16 +7,16 @@ var server = restify.createServer();
 
 server.listen(process.env.port || process.env.PORT || 3978, function () {
 
-console.log('%s listening to %s http://localhost:', server.url); 
+console.log('%s listening to http://localhost:', server.url); 
 
 });
 
 // Create chat bot
 var connector = new builder.ChatConnector({
 
-    appId: process.env.MICROSOFT_APP_ID,
+    appId: '',
 
-    appPassword: process.env.MICROSOFT_APP_PASSWORD
+    appPassword: ''
 
 });
 
@@ -24,7 +24,7 @@ var bot = new builder.UniversalBot(connector);
 
 bot.dialog('/', [
     function (session) {
-        session.send("Hello World!");
+        session.send("Hello World m8");
     }
 
 ]);
