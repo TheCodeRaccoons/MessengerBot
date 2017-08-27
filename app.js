@@ -31,7 +31,10 @@ const intents = new builder.IntentDialog({ recognizers: [recognizer] });
 intents.matches('chPw', function (session, results) {
     session.send('Hola ¿con la contrasena de que cuenta tienes problema?');
     session.send('Sap, Active Directory, Service Desk, Sigma');
+    setTimeout(5000);
+    session.send('porfa contesta :C');
 });
+
 
 
 //Set default response
