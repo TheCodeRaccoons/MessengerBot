@@ -29,15 +29,14 @@ const intents = new builder.IntentDialog({ recognizers: [recognizer] });
 
 //SAP Workflow
 intents.matches('saludo', function (session, results) {
-    //session.send('Hola, en que te podemos ayudar?'); 
-    bot.dialog('Hola, en que te podemos ayudar?', [
+    session.send('Hola, en que te podemos ayudar?'); 
+});
 
-        //Change password
-        intents.matches('chPw', function (session, results) {
-            session.send('¿Con la contrasena de que cuenta tienes problema?');
-            session.send('Sap, Active Directory, Service Desk, Sigma'); 
-        })
-    ]); 
+
+//Change password
+intents.matches('chPw', function (session, results) {
+    session.send('¿Con la contrasena de que cuenta tienes problema?');
+    session.send('Sap, Active Directory, Service Desk, Sigma'); 
 });
 
 
