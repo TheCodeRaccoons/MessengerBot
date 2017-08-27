@@ -47,6 +47,21 @@ intents.matches('psSap', function (session, results) {
 });
 
 
+//AD Workflow
+intents.matches('psAD', function (session, results) {
+    session.send('Veamos, para reestablecer o cambiar tu contrasena de Active Directory es necesario entrar a esta liga');
+    session.send('https://es.surveymonkey.com/welcome/sem/'); 
+    session.send('Al llenar el formulario da click en Aceptar y Listo!');
+});
+
+
+//Unlock User
+intents.matches('ubUs', function (session, results) {
+    session.send('Lamentamos escuchar eso ¿En que cuenta te encuentras bloqueado?');
+    session.send('Sap, Active Directory');  
+});
+
+
 
 
 //Set default response
