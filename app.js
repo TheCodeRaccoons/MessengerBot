@@ -22,7 +22,7 @@ var connector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(connector);
 
-bot.dialog('/', [
+bot.dialog('/sayHi', [
     function (session) {
         session.send("Hello World m8");
     }
