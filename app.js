@@ -32,12 +32,12 @@ intents.matches('saludo', function (session, results) {
     session.send('Hola, en que te podemos ayudar?'); 
 });
 
-//Change password
+/*Change password
 intents.matches('chPw', function (session, results) {
     session.send('¿Con la contrasena de que cuenta tienes problema?');
     session.send('Sap, Active Directory, Service Desk, Sigma'); 
 });
-
+*/
 //SAP Workflow
 intents.matches('psSap', function (session, results) {
     session.send('Deacuerdo, para poder reestablecer tu contrasena de SAP es necesario entrar a esta liga');
