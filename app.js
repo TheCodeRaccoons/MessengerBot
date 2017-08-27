@@ -14,9 +14,9 @@ console.log('%s listening to %s http://localhost:', server.url);
 // Create chat bot
 var connector = new builder.ChatConnector({
 
-    appId: process.env.MICROSOFT_APP_ID,
+    appId: '731141aa-6e6f-4e10-9881-052b64ff160d',
 
-    appPassword: process.env.MICROSOFT_APP_PASSWORD
+    appPassword: 'b0FWV4bfG3LLFXgm44gU8EW'
 
 });
 
