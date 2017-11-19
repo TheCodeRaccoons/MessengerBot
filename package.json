@@ -1,7 +1,7 @@
 {
   "name": "sigmi",
   "version": "1.0.0",
-  "description": "Chat bot helpdesk for Sigma Alimentos",
+  "description": "Chat bot",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
